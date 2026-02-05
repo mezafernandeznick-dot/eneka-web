@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENEKA – Tops</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<header class="header">
+  <button class="icon-btn" onclick="history.back()" aria-label="Volver">←</button>
+  <a class="logo" href="index.html" style="margin-left:8px">ENEKA</a>
+</header>
+
+<main class="main">
+
+  <nav class="breadcrumb">
+    <a href="index.html">Inicio</a>
+    <span class="sep">›</span>
+    <span>Tops</span>
+  </nav>
+
+  <h1 class="page-title">Tops Halter</h1>
+  <p class="subhead">Explora opciones para ella.</p>
+
+  <!-- ===== BLOQUE 1 ===== -->
+  <section class="product-layout">
+
+   <div>
+  <div class="lifestyle-images">
+
+  <figure class="img-item">
+    <img src="img/tpg.rojovino.jpg">
+    <figcaption>Color Rojo vino</fipgcation>
+  </figure>
+
+  <figure class="img-item">
+    <img src="img/tpg.rosado.jpg">
+    <figcaption>Color Rosado</figcaption>
+  </figure>
+
+  <figure class="img-item">
+    <img src="img/tpg.blanco.jpg">
+    <figcaption>Color Blanco</figcaption>
+  </figure>
+
+  <figure class="img-item">
+    <img src="img/tpg.azulmarino.jpg">
+    <figcaption>Color Azul marino</figcaption>
+  </figure>
+
+  <figure class="img-item">
+    <img src="img/topgriss.jpg">
+    <figcaption>Color Gris</figcaption>
+  </figure>
+
+  <figure class="img-item">
+    <img src="img/tpg.negro.jpg">
+    <figcaption>Color Negro</figcaption>
+  </figure>
+
+</div>
+</div>
+
+    <div class="product-info">
+      <h4 class="product-name">Top Deportivo</h4>
+      <p class="product-desc">
+        Soporte medio, tela transpirable, ideal para entrenamiento.
+      </p>
+      <span class="product-price">S/ 48.00</span>
+
+      <button class="buy-btn"
+        onclick="comprar('Top Deportivo','45.90','img/tops/1.jpg')">
+        Comprar
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ===== BLOQUE 2 ===== -->
+  <h1 class="page-title" style="margin-top:40px;">Más Tops</h1>
+
+  <section class="product-layout">
+
+    <div>
+      <div class="lifestyle-images">
+        <img src="img/top1.jpg">
+        <img src="img/top2.jpg">
+        <img src="img/tpg.negro.jpg">
+      </div>
+
+      <div class="gallery-wrapper">
+
+        <div class="thumbs">
+          <img src="img/tops2/1.jpg" data-index="0" class="active" onclick="changeTop2(this)">
+          <img src="img/tops2/2.jpg" data-index="1" onclick="changeTop2(this)">
+          <img src="img/tops2/3.jpg" data-index="2" onclick="changeTop2(this)">
+          <img src="img/tops2/4.jpg" data-index="3" onclick="changeTop2(this)">
+          <img src="img/tops2/5.jpg" data-index="4" onclick="changeTop2(this)">
+          <img src="img/tops2/6.jpg" data-index="5" onclick="changeTop2(this)">
+          <img src="img/tops2/7.jpg" data-index="6" onclick="changeTop2(this)">
+          <img src="img/tops2/8.jpg" data-index="7" onclick="changeTop2(this)">
+          <img src="img/tops2/9.jpg" data-index="8" onclick="changeTop2(this)">
+          <img src="img/tops2/10.jpg" data-index="9" onclick="changeTop2(this)">
+        </div>
+
+        <div class="main-image">
+          <button class="arrow left" onclick="prevTop2()">‹</button>
+          <img id="topImage2" src="img/tops2/1.jpg">
+          <button class="arrow right" onclick="nextTop2()">›</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h4 class="product-name">Top Deportivo Premium</h4>
+      <p class="product-desc">
+        Alto soporte, ajuste firme y máxima comodidad.
+      </p>
+      <span class="product-price">S/ 25.00</span>
+
+      <button class="buy-btn"
+        onclick="comprar('Top Deportivo Premium','55.90','img/tops2/1.jpg')">
+        Comprar
+      </button>
+    </div>
+
+  </section>
+
+</main>
+
+<a class="fab" href="https://wa.me/51927208885" target="_blank">
+  <img src="assets/icons/whatsapp.png">
+</a>
+
+<script src="js/whatsapp.js"></script>
+
+<script>
+  const imagesTop1 = Array.from({length:10},(_,i)=>`img/tops/${i+1}.jpg`);
+  const imagesTop2 = Array.from({length:10},(_,i)=>`img/tops2/${i+1}.jpg`);
+
+  let t1 = 0, t2 = 0;
+
+  function changeTop1(el){ t1=+el.dataset.index; updateTop(1); }
+  function nextTop1(){ t1=(t1+1)%imagesTop1.length; updateTop(1); }
+  function prevTop1(){ t1=(t1-1+imagesTop1.length)%imagesTop1.length; updateTop(1); }
+
+  function changeTop2(el){ t2=+el.dataset.index; updateTop(2); }
+  function nextTop2(){ t2=(t2+1)%imagesTop2.length; updateTop(2); }
+  function prevTop2(){ t2=(t2-1+imagesTop2.length)%imagesTop2.length; updateTop(2); }
+
+  function updateTop(n){
+    const imgs = n===1?imagesTop1:imagesTop2;
+    const idx = n===1?t1:t2;
+    document.getElementById(`topImage${n}`).src = imgs[idx];
+
+    document.querySelectorAll(`section:nth-of-type(${n}) .thumbs img`)
+      .forEach(img=>img.classList.remove('active'));
+
+    const active = document.querySelector(`section:nth-of-type(${n}) .thumbs img[data-index="${idx}"]`);
+    if(active) active.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

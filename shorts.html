@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENEKA – Shorts</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<header class="header">
+  <button class="icon-btn" onclick="history.back()" aria-label="Volver">←</button>
+  <a class="logo" href="index.html" style="margin-left:8px">ENEKA</a>
+</header>
+
+<main class="main">
+
+  <nav class="breadcrumb">
+    <a href="index.html">Inicio</a>
+    <span class="sep">›</span>
+    <span>Shorts</span>
+  </nav>
+
+  <h1 class="page-title">Short Confort </h1>
+  <p class="subhead">Tiro alto</p>
+
+  <!-- ===== BLOQUE SUPERIOR ===== -->
+  <section class="product-layout">
+
+  <!-- IZQUIERDA: LIFESTYLE + GALERÍA -->
+  <div>
+    <div class="lifestyle-images">
+      <img src="img/s.co.jpg" alt="Short celeste">
+      <img src="img/s.co4.jpg" alt="Short crema">
+      <img src="img/s.co2.jpg" alt="Short rosado">
+    </div>
+
+    <!-- GALERÍA CON FLECHAS (DEBAJO) -->
+    <div class="gallery-wrapper">
+
+      <div class="thumbs">
+  <img src="img/s.azulacero.jpg" data-index="0" class="active" onclick="changeImage(this)">
+  <img src="img/s.crema.jpg" data-index="1" onclick="changeImage(this)">
+  <img src="img/s.rosado.jpg" data-index="2" onclick="changeImage(this)">
+  <img src="img/s.celesteg.jpg" data-index="3" onclick="changeImage(this)">
+  <img src="img/s.rojo.jpg" data-index="4" onclick="changeImage(this)">
+  <img src="img/s1.jpg" data-index="5" onclick="changeImage(this)">
+  <img src="img/s.morado.jpg" data-index="6" onclick="changeImage(this)">
+  <img src="img/s2.jpg" data-index="7" onclick="changeImage(this)">
+  <img src="img/s3.jpg" data-index="8" onclick="changeImage(this)">
+  <img src="img/s.blanco.jpg" data-index="9" onclick="changeImage(this)">
+</div>
+
+
+      <div class="main-image">
+        <button class="arrow left" onclick="prevImage()">‹</button>
+
+        <img id="currentImage"
+             src="img/s.azulacero.jpg"
+             alt="Short Deportivo">
+
+        <button class="arrow right" onclick="nextImage()">›</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CENTRO: INFO -->
+  <div class="product-info">
+    <h4 class="product-name">Short Deportivo</h4>
+    <p class="product-desc">
+      Tela elasticada, cintura alta, ideal para gym y uso diario.
+    </p>
+    <span class="product-price">S/ 36.00</span>
+
+    <button class="buy-btn"
+      onclick="comprar('Short Deportivo','49.90','img/s.celesteg.jpg')">
+      Comprar
+    </button>
+  </div>
+
+</section>
+<hr style="margin:50px 0; border:none; border-top:1px solid #e5e7eb;">
+
+<h1 class="page-title">Shorts Back V</h1>
+<p class="subhead">Nuevos diseños con estampados exclusivos.</p>
+
+<section class="product-layout">
+
+  <!-- IZQUIERDA -->
+  <div>
+    <div class="lifestyle-images">
+      <img src="img/s.negro.png" alt="Short estampado 1">
+      <img src="img/s.co3.jpg" alt="Short estampado 2">
+      <img src="img/s.gris.png" alt="Short estampado 3">
+      
+    </div>
+
+    <!-- GALERÍA -->
+    <div class="gallery-wrapper">
+
+      <div class="thumbs">
+        <img src="img/v1.jpg" data-index="0" class="active" onclick="changeImage2(this)">
+        <img src="img/v2.jpg" data-index="1" onclick="changeImage2(this)">
+        <img src="img/v3.jpg" data-index="2" onclick="changeImage2(this)">
+        <img src="img/v4.jpg" data-index="3" onclick="changeImage2(this)">
+        <img src="img/v5.jpg" data-index="3" onclick="changeImage2(this)">
+        <img src="img/v6.jpg" data-index="3" onclick="changeImage2(this)">
+        <img src="img/v7.jpg" data-index="3" onclick="changeImage2(this)">
+        <img src="img/v8.jpg" data-index="3" onclick="changeImage2(this)">
+        <img src="img/v9.jpg" data-index="3" onclick="changeImage2(this)">
+        <img src="img/v10.jpg" data-index="3" onclick="changeImage2(this)">
+        <img src="img/v11.jpg" data-index="3" onclick="changeImage2(this)">
+    
+      </div>
+
+      <div class="main-image">
+        <button class="arrow left" onclick="prevImage2()">‹</button>
+        <img id="currentImage2" src="img/s.est1.jpg" alt="Short Estampado">
+        <button class="arrow right" onclick="nextImage2()">›</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="product-info">
+    <h4 class="product-name">Short Deportivo Estampado</h4>
+    <p class="product-desc">
+      Tela elasticada, diseño exclusivo y alta compresión.
+    </p>
+    <span class="product-price">S/ 32.00</span>
+
+    <button class="buy-btn"
+      onclick="comprar('Short Estampado','59.90','img/s.est1.jpg')">
+      Comprar
+    </button>
+  </div>
+
+</section>
+<hr style="margin:50px 0; border:none; border-top:1px solid #e5e7eb;">
+
+<h1 class="page-title">Shorts Tie Dye</h1>
+<p class="subhead">Mayor compresión y acabado premium.</p>
+<section class="product-layout">
+
+  <!-- IZQUIERDA -->
+  <div>
+    <div class="lifestyle-images">
+      <img src="img/t1.jpg" alt="Short premium 1">
+      <img src="img/t2.jpg" alt="Short premium 2">
+      <img src="img/t3.jpg" alt="Short premium 3">
+      <img src="img/t4.jpg" alt="Short premium 3">
+      <img src="img/t5.jpg" alt="Short premium 3">
+      <img src="img/t6.jpg" alt="Short premium 3">
+      <img src="img/t7.jpg" alt="Short premium 3">
+      <img src="img/t8.jpg" alt="Short premium 3">
+      <img src="img/t9.jpg" alt="Short premium 3">
+      <img src="img/t10.jpg" alt="Short premium 3">
+      <img src="img/t11.jpg" alt="Short premium 3">
+      <img src="img/t12.jpg" alt="Short premium 3">
+    
+    </div>
+
+    
+  </div>
+
+  <!-- INFO -->
+  <div class="product-info">
+    <h4 class="product-name">Short Deportivo Premium</h4>
+    <p class="product-desc">
+      Tela gruesa, costuras reforzadas y máxima durabilidad.
+    </p>
+    <span class="product-price">S/ 28.00</span>
+
+    <button class="buy-btn"
+      onclick="comprar('Short Premium','69.90','img/s.p1.jpg')">
+      Comprar
+    </button>
+  </div>
+
+</section>
+
+</main>
+
+<a class="fab" href="https://wa.me/51927208885" target="_blank">
+  <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+</a>
+
+<script src="js/whatsapp.js"></script>
+
+<script>
+  const images = [
+    'img/s.azulacero.jpg',
+    'img/s.crema.jpg',
+    'img/s.rosado.jpg',
+    'img/s.celesteg.jpg',
+    'img/s.rojo.jpg',
+    'img/s1.jpg',
+    'img/s.morado.jpg',
+    'img/s2.jpg',
+    'img/s3.jpg',
+    'img/s.blanco.jpg',
+    
+
+
+  ];
+
+  let index = 0;
+
+  function changeImage(el) {
+    index = Number(el.dataset.index);
+    updateImage();
+  }
+
+  function nextImage() {
+    index = (index + 1) % images.length;
+    updateImage();
+  }
+
+  function prevImage() {
+    index = (index - 1 + images.length) % images.length;
+    updateImage();
+  }
+
+  function updateImage() {
+    const img = document.getElementById('currentImage');
+    img.src = images[index];
+
+    document.querySelectorAll('.thumbs img').forEach(t =>
+      t.classList.remove('active')
+    );
+
+    const active = document.querySelector(
+      `.thumbs img[data-index="${index}"]`
+    );
+    if (active) active.classList.add('active');
+  }
+</script>
+<script>
+  const images2 = [
+    'img/s.est1.jpg',
+    'img/s.est2.jpg',
+    'img/s.est3.jpg',
+    'img/s.est4.jpg'
+  ];
+
+  let index2 = 0;
+
+  function changeImage2(el) {
+    index2 = Number(el.dataset.index);
+    updateImage2();
+  }
+
+  function nextImage2() {
+    index2 = (index2 + 1) % images2.length;
+    updateImage2();
+  }
+
+  function prevImage2() {
+    index2 = (index2 - 1 + images2.length) % images2.length;
+    updateImage2();
+  }
+
+  function updateImage2() {
+    const img = document.getElementById('currentImage2');
+    img.src = images2[index2];
+
+    document.querySelectorAll('.thumbs img').forEach(t =>
+      t.classList.remove('active')
+    );
+
+    const active = document.querySelector(
+      `.thumbs img[data-index="${index2}"]`
+    );
+    if (active) active.classList.add('active');
+  }
+</script>
+<script>
+  const images3 = [
+    'img/s.p1.jpg',
+    'img/s.p2.jpg',
+    'img/s.p3.jpg',
+    'img/s.p4.jpg',
+    'img/s.p5.jpg'
+  ];
+
+  let index3 = 0;
+
+  function changeImage3(el) {
+    index3 = Number(el.dataset.index);
+    updateImage3();
+  }
+
+  function nextImage3() {
+    index3 = (index3 + 1) % images3.length;
+    updateImage3();
+  }
+
+  function prevImage3() {
+    index3 = (index3 - 1 + images3.length) % images3.length;
+    updateImage3();
+  }
+
+  function updateImage3() {
+    const img = document.getElementById('currentImage3');
+    img.src = images3[index3];
+
+    document.querySelectorAll('.thumbs img').forEach(t =>
+      t.classList.remove('active')
+    );
+
+    const active = document.querySelector(
+      `.thumbs img[data-index="${index3}"]`
+    );
+    if (active) active.classList.add('active');
+  }
+</script>
+
+
+</body>
+</html>
